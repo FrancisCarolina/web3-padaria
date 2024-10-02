@@ -75,5 +75,17 @@
             return $stmt;
         } 
 
+
+        public function delete(){
+            $query = "DELETE FROM cliente WHERE id=:id";
+            $stmt = $this->conexao->prepare($query);
+
+            $stmt->bindParam(":id", $this->id);
+
+            if($stmt->execute()){
+                return true;
+            }
+            return false;
+        }
         
     }
