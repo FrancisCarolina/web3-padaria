@@ -13,7 +13,7 @@
 
         if ($cliente->create()) {
             echo "Cliente cadastrado com sucesso!";
-            header("Refresh:3;url=form_cadastroCliente.php");
+            header("Refresh:1;url=listarCliente.php");
         }else {
             echo "Erro ao cadastrar o cliente!";
         }
